@@ -1,29 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const projects = [
-  {
-    title: '포트폴리오 웹사이트',
-    description: 'React와 TypeScript를 사용하여 만든 개인 포트폴리오 웹사이트',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    image: '/project1.jpg',
-    link: '#',
-  },
-  {
-    title: '쇼핑몰 웹사이트',
-    description: 'Next.js를 사용하여 만든 반응형 쇼핑몰 웹사이트',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Stripe'],
-    image: '/project2.jpg',
-    link: '#',
-  },
-  {
-    title: '투두 리스트 앱',
-    description: 'React와 Firebase를 사용하여 만든 실시간 투두 리스트 앱',
-    technologies: ['React', 'Firebase', 'Material UI'],
-    image: '/project3.jpg',
-    link: '#',
-  },
-];
+import { projects } from '../../data/projects';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   return (
@@ -43,7 +21,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -73,12 +51,12 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
+                <Link
+                  to={`/projects/${project.id}`}
                   className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
                 >
-                  View Project →
-                </a>
+                  자세히 보기 →
+                </Link>
               </div>
             </motion.div>
           ))}
