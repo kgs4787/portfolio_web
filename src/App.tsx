@@ -4,8 +4,6 @@ import Hero from './components/organisms/Hero';
 import About from './components/organisms/About';
 import Projects from './components/organisms/Projects';
 import ProjectDetail from './components/organisms/ProjectDetail';
-import Blog from './components/organisms/Blog';
-import BlogPost from './components/organisms/BlogPost';
 import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
 import FloatingButtons from './components/molecules/FloatingButtons';
@@ -30,8 +28,6 @@ const App: React.FC = () => {
               }
             />
             <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
           </Routes>
           <Footer />
         </div>
