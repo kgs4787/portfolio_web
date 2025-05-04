@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,8 +12,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact</h2>
+          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -23,17 +23,17 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
               연락 주세요
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               새로운 프로젝트나 협업 기회에 대해 이야기 나누고 싶으시다면
               아래 연락처로 연락 주세요.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
                 <svg
-                  className="w-6 h-6 text-blue-600 mr-4"
+                  className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -45,11 +45,11 @@ const Contact = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="text-gray-600">example@email.com</span>
+                <span className="text-gray-600 dark:text-gray-300">example@email.com</span>
               </div>
               <div className="flex items-center">
                 <svg
-                  className="w-6 h-6 text-blue-600 mr-4"
+                  className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ const Contact = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498A1 1 0 0121 17.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-gray-600">+82 10-1234-5678</span>
+                <span className="text-gray-600 dark:text-gray-300">+82 10-1234-5678</span>
               </div>
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
                   이름
                 </label>
@@ -84,13 +84,13 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
                   이메일
                 </label>
@@ -98,13 +98,13 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
                 >
                   메시지
                 </label>
@@ -112,12 +112,12 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-600 dark:bg-blue-500 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
               >
                 보내기
               </button>
