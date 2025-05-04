@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# 김강산 포트폴리오 웹사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+개인 포트폴리오 웹사이트입니다. React, TypeScript, Tailwind CSS를 사용하여 개발되었습니다.
 
-Currently, two official plugins are available:
+## 🚀 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 반응형 디자인
+- 스크롤 기반 네비게이션
+- 애니메이션 효과
+- 접근성 최적화
 
-## Expanding the ESLint configuration
+## 🛠 기술 스택
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **프론트엔드**
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - Framer Motion (애니메이션)
+  - React Scroll (스크롤 네비게이션)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 프로젝트 구조
+
+```
+src/
+├── components/
+│   ├── atoms/      # 기본 컴포넌트
+│   ├── molecules/  # 복합 컴포넌트
+│   └── organisms/  # 페이지 섹션 컴포넌트
+├── pages/          # 페이지 컴포넌트
+└── styles/         # 전역 스타일
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 시작하기
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 필수 조건
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js (v14 이상)
+- npm 또는 yarn
+
+### 설치
+
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
 ```
+
+## 🔧 빌드
+
+```bash
+# 프로덕션 빌드
+npm run build
+
+# 빌드 결과물 실행
+npm run start
+```
+
+## 📝 라이센스
+
+이 프로젝트는 MIT 라이센스를 따릅니다.
+
+## 📞 연락처
+
+- 이메일: [이메일 주소]
+- GitHub: [GitHub 프로필 링크]
+- LinkedIn: [LinkedIn 프로필 링크]
