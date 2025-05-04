@@ -8,12 +8,12 @@ interface DefaultLayoutProps {
 
 export default function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
       <Navbar />
-      <main className="min-h-screen px-4 py-8 max-w-6xl mx-auto">
+      <main className="flex-1 px-4 py-8 max-w-6xl mx-auto w-full">
         {children}
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
