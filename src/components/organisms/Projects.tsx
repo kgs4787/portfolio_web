@@ -31,7 +31,7 @@ const Projects = () => {
               <div className="h-48 bg-gray-200 dark:bg-gray-700">
                 {/* 프로젝트 이미지 */}
                 <img
-                  src={project.image}
+                  src={project.images[0]}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />

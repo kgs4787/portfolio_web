@@ -7,6 +7,7 @@ import ProjectDetail from './components/organisms/ProjectDetail';
 import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
 import FloatingButtons from './components/molecules/FloatingButtons';
+import PageNavigation from './components/molecules/PageNavigation';
 import { ThemeProvider } from './context/ThemeContext';
 
 const App: React.FC = () => {
@@ -15,15 +16,25 @@ const App: React.FC = () => {
       <Router>
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
           <FloatingButtons />
+          <PageNavigation />
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <Hero />
-                  <About />
-                  <Projects />
-                  <Contact />
+                  <section id="home">
+                    <Hero />
+                  </section>
+                  <section id="about">
+                    <About />
+                  </section>
+                
+                  <section id="projects">
+                    <Projects />
+                  </section>
+                  <section id="contact">
+                    <Contact />
+                  </section>
                 </>
               }
             />
